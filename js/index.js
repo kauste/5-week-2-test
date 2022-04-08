@@ -79,21 +79,45 @@ console.log(bigNum);
 console.log('-------Nr.7.------');
 
 const raides = ['A', 'B', 'C', 'D'];
+const masyvas2 =[]
+pozicija = rand(1, 4);
+for (i = 0; i < 100; i++) {
+    pozicija = rand(0, 3);
+    masyvas2.push(raides[pozicija])
+}
+console.log(masyvas2)
 
 // Nr8.
 console.log('-------Nr.8.------');
 
 function lygineSuma (a, b) {
-    if(typeof a !== 'number' || typeof b !== 'object') {
+    if (typeof a !== 'number' 
+        && typeof a !== 'object') {
         return `ERROR: pateikta pirma reiksme yra netinkamo tipo`;
     }
-    if(typeof b !== 'number' || typeof b !== 'object') {
+    if (typeof b !== 'number' 
+        && typeof b !== 'object') {
         return `ERROR: pateikta antra reiksme yra netinkamo tipo`;
     }
-    else return a + b;
+    if ((typeof a === 'number'
+        && typeof b === 'object')
+        || (typeof a === 'object' 
+        && typeof b === 'number')) {
+        return `pateiktos reiksmes turi buti to paties tipo`;
+        }
+    if (typeof a === 'number' 
+        && typeof b === 'number') {
+        return a + b;
+    }
+    if (typeof a === 'object' 
+        && typeof b === 'object') {
+        return a.length + b.length;
+    }
+ 
 }
+
 console.log(lygineSuma (10, 20));
-console.log(lygineSuma([10, 11, 12], [20, 21, 22]));
+console.log(lygineSuma ([10, 11, 12], [20, 21, 22]));
 
 // Nr9.
 console.log('-------Nr.9.------');
