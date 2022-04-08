@@ -80,7 +80,6 @@ console.log('-------Nr.7.------');
 
 const raides = ['A', 'B', 'C', 'D'];
 const masyvas2 =[];
-pozicija = rand(1, 4);
 for (i = 0; i < 100; i++) {
     pozicija = rand(0, 3);
     masyvas2.push(raides[pozicija]);
