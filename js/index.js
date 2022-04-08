@@ -104,19 +104,23 @@ function lygineSuma (a, b) {
         && typeof b === 'number')) {
         return `pateiktos reiksmes turi buti to paties tipo`;
     }
+
     if (typeof a === 'number' 
         && typeof b === 'number') {
-        return a + b;
+        suma = a + b;
     }
     if (typeof a === 'object' 
         && typeof b === 'object') {
-        return a.length + b.length;
+        suma = a.length + b.length;
     }
- 
+
+    if (suma % 2 === 0){
+        return suma;
+    } else return `suma nelygine`;
 }
 
 console.log(lygineSuma (10, 20));
-console.log(lygineSuma ([10, 11, 12], [20, 21, 22]));
+console.log(lygineSuma ([10, 11, 12], [20, 21]));
 
 // Nr9.
 console.log('-------Nr.9.------');
