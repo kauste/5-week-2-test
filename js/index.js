@@ -127,13 +127,38 @@ function telefonoNumeris(a) {
     if(a.length !== 10) {
         return 'Pateiktas netinkamas kiekis skaitmenu';
     }
-    let telNr = '';
-    for(i = 0; i <10; i++){
-        let skaitmuo = a[i]
+    let telNr1 = '';
+    let telNr2 = '';
+    let telNr3 = '';
+
+    for(i = 0; i <3; i++) {
+        let skaitmuo = a[i];
         if(typeof skaitmuo !== 'number' || !isFinite(skaitmuo)) {
             return 'Pateikta netinkamo tipo reiksme';
-        } else  telNr += a[i]
-    }    return telNr
+        } else  {
+            telNr1 += a[i]
+            }
+    }
+    for(i = 3; i <6; i++) {
+        let skaitmuo = a[i];
+        if(typeof skaitmuo !== 'number' || !isFinite(skaitmuo)) {
+                return 'Pateikta netinkamo tipo reiksme';
+        } else  {
+            telNr2 += a[i];
+            }
+    }
+    for(i = 6; i <10; i++){
+        let skaitmuo = a[i];
+        if(typeof skaitmuo !== 'number' || !isFinite(skaitmuo)) {
+                return 'Pateikta netinkamo tipo reiksme';
+        } else  {
+            telNr3 += a[i];
+            }
+    }   return `(${telNr1}) ${telNr2}-${telNr3}`;
 }
 
 console.log(telefonoNumeris([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+
+
+
+
