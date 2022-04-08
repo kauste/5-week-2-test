@@ -80,11 +80,31 @@ console.log('-------Nr.7.------');
 
 const raides = ['A', 'B', 'C', 'D'];
 const masyvas2 =[];
+sumaA = 0;
+sumaB = 0;
+sumaC = 0;
+sumaD = 0;
 for (i = 0; i < 100; i++) {
-    pozicija = rand(0, 3);
-    masyvas2.push(raides[pozicija]);
+    let pozicijoje = raides[rand(0, 3)];
+    masyvas2.push(pozicijoje);
+    if (pozicijoje === 'A') {
+        sumaA += 1;
+    }
+    if (pozicijoje === 'B') {
+        sumaB += 1;
+    }
+    if (pozicijoje === 'C') {
+        sumaC += 1;
+    }
+    if (pozicijoje === 'D') {
+        sumaD += 1;
+    }
 }
+
 console.log(masyvas2);
+console.log(`Raidziu A masyve yra ${sumaA}. Raidziu B masyve yra ${sumaB}. Raidziu C masyve yra ${sumaC}. Raidziu D masyve yra ${sumaD}.`) 
+
+
 
 // Nr8.
 console.log('-------Nr.8.------');
@@ -117,6 +137,7 @@ function lygineSuma (a, b) {
     if (suma % 2 === 0){
         return suma;
     } else return `suma nelygine`;
+
 }
 
 console.log(lygineSuma (10, 20));
